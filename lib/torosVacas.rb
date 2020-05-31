@@ -3,6 +3,7 @@ class TorosVacas
         return num.to_s == num.to_i.to_s
     end
     def revisar(respuesta,codigo)
+
         vacas=0
         toros=0
         for i in 0..codigo.length-1
@@ -25,3 +26,4 @@ class TorosVacas
         return resp
       end
 end
+

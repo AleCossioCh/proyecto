@@ -1,4 +1,10 @@
 class TorosVacas
+    def tamanoCorrecto(cadena)
+        return 4==cadena.length()
+     end
+    def formatoCorrecto(cadena)
+      return (tamanoCorrecto(cadena)==true and es_numero(cadena)==true)
+    end
     def es_numero(num)
         return num.to_s == num.to_i.to_s
     end

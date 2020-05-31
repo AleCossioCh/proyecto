@@ -18,7 +18,7 @@ class TorosVacas
         res=[toros,vacas]
         return res
       end
-      def convertirStringArrreglo(cadenaString)
+      def convertirStringArreglo(cadenaString)
         resp=[]
         for i in 0..cadenaString.length-1
           resp.append(cadenaString[i].to_i)

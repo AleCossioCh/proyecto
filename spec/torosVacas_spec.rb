@@ -20,7 +20,7 @@ RSpec.describe TorosVacas do
         expect(@@pruebas.revisar([5,7],[7,2])).to eq([0,1])
     end
     it "devuelve el string 12 en arreglo [1,2] " do
-        expect(@@pruebas.convertirStringArrreglo("12")).to eq([1,2])
+        expect(@@pruebas.convertirStringArreglo("12")).to eq([1,2])
     end
   end
 

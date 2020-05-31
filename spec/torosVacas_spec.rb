@@ -15,6 +15,10 @@ RSpec.describe TorosVacas do
     
     it "Devuelve 1 toro si el codigo es 1 y el intento es 1 " do
       pruebas=TorosVacas.new
-      expect(pruebas.revisar(1,1)).to eq([1,0])
+      expect(pruebas.revisar([1],[1])).to eq([1,0])
+    end
+    it "Devuelve 1 vaca si el codigo es 5,7 y el intento es 7,2 " do
+      pruebas=TorosVacas.new
+      expect(pruebas.revisar([5,7],[7,2])).to eq([0,1])
     end
 end

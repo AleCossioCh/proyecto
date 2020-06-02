@@ -2,6 +2,8 @@ require 'sinatra'
 require './lib/torosVacas'
 get '/' do
   $codigoSecreto=nil
+  $intento=nil
+  $codigoSecretoOk=false
   $torosVacas=TorosVacas.new
   erb :showOptions
 end
@@ -11,7 +13,10 @@ get '/ingresarCodigo' do
 end
 
 get '/iniciar' do
+if($codigoSecretoOk==false)
   $codigoSecreto=params[:codigo]
+end
+
   erb :jugarview
 end
 

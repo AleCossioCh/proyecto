@@ -3,7 +3,11 @@
 <%end%>
 <%if $torosVacas.formatoCorrecto($codigoSecreto)%>
     <% $codigoSecretoOk = true %>
-    
+<% end %>
+<% if $intento!=nil%>
+  <% if$respuesta[0]==4%>
+    <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=http://localhost:4567/resultadofinal">
+  <% end %>
 <% end %>
 Ingrese su intento
 <form method="post" action="/verificar ">

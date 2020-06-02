@@ -24,3 +24,7 @@ post '/verificar' do
   $intento=params[:intento]
   erb :verificarcodigo
 end
+
+get '/resultadofinal' do
+  erb :resultadofinal
+end

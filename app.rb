@@ -6,8 +6,8 @@ get '/' do
   $codigoSecretoOk=false
   $torosVacas=TorosVacas.new
   $nroIntentos=10
-  $intentosHechos=0
   $listaIntentos=[]
+  $intentosHechos=0
   erb :showOptions
 end
 

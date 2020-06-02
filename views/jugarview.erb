@@ -1,4 +1,9 @@
+<%if $torosVacas.formatoCorrecto($codigoSecreto) == false %>
+  <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=http://localhost:4567//ingresarCodigo">
+<%end%>
 Ingrese su intento
 <form method="post" action="/verificar ">
   <input type="string"  name="intento">
   <input type="submit" value="Verificar">
+
+ 

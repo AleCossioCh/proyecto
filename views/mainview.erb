@@ -2,3 +2,7 @@ Ingresa el codigo secreto
 <form method="get" action="/iniciar">
   <input type="string"  name="codigo">
   <input type="submit" value="Iniciar el juego">
+
+<% if $codigoSecreto!=nil%>
+  <h4>Codigo no sigue el formato no se olvide que deben ser 4 numeros</h4>
+<% end %>

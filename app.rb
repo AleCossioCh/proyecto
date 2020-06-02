@@ -1,6 +1,8 @@
 require 'sinatra'
 require './lib/torosVacas'
 get '/' do
+  $codigoSecreto=nil
+  $torosVacas=TorosVacas.new
   erb :showOptions
 end
 
@@ -14,7 +16,6 @@ get '/iniciar' do
 end
 
 post '/verificar' do
-  $torosVacas=TorosVacas.new
   $intento=params[:intento]
   erb :verificarcodigo
 end

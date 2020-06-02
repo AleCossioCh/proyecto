@@ -14,9 +14,9 @@ Ingrese su intento
 <% end %>
 <% if $intento!=nil and $torosVacas.formatoCorrecto($intento)==true %>
   <%$intentosHechos=$intentosHechos+1%>
-  <br>intentos hechos: <%=$intentosHechos%>
+  <br>intentos hechos: <%=$intentosHechos%><br>
   <%$listaIntentos.append($intento)%>
-  codigos probados: <%=$listaIntentos%><br>
+  codigos probados: <%=$listaIntentos%>
  <br>su intento tiene <br>
   vacas: <%=$respuesta[1]%> <br>
   toros: <%=$respuesta[0]%><br>

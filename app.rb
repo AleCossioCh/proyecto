@@ -5,7 +5,7 @@ get '/' do
   $intento=nil
   $codigoSecretoOk=false
   $torosVacas=TorosVacas.new
-  $nroIntentos=4
+  $nroIntentos=10
   $intentosHechos=0
   erb :showOptions
 end

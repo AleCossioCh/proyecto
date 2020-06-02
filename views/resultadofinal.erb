@@ -1,5 +1,10 @@
 <% if$respuesta[0]==4%>
 <h1> GANASTE FELICIDADES</h1>
 <% end %>
+<% if $intentosHechos==$nroIntentos and $respuesta[0]!=4%>
+  <h1> PERDISTE</h1>
+  el codigo era <%=$codigoSecreto%>
+<% end %>
+<br>intentos hechos: <%=$intentosHechos%>
 <form method="get" action="/ ">
   <input type="submit" value="volver al inicio">

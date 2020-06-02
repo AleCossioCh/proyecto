@@ -4,11 +4,7 @@
 <%if $torosVacas.formatoCorrecto($codigoSecreto)%>
     <% $codigoSecretoOk = true %>
 <% end %>
-<% if $intento!=nil%>
-  <% if$respuesta[0]==4%>
-    <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=http://localhost:4567/resultadofinal">
-  <% end %>
-<% end %>
+
 Ingrese su intento
 <form method="post" action="/verificar ">
   <input type="string"  name="intento">
@@ -17,9 +13,15 @@ Ingrese su intento
   <h4>Su respuesta no tiene el formato</h4>
 <% end %>
 <% if $intento!=nil and $torosVacas.formatoCorrecto($intento)==true %>
+  <%$intentosHechos=$intentosHechos+1%>
+  <br>intentos hechos: <%=$intentosHechos%>
  <br>su intento tiene <br>
   vacas: <%=$respuesta[1]%> <br>
   toros: <%=$respuesta[0]%><br>
 <%end%>
-
+<% if $intento!=nil%>
+  <% if$respuesta[0]==4 or $intentosHechos==$nroIntentos%>
+    <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=http://localhost:4567/resultadofinal">  
+  <% end %>
+<% end %>
  

@@ -33,3 +33,7 @@ end
 get '/tipoDePartida' do
   erb :tipopartida
 end
+get '/username' do
+  erb :username
+end
+

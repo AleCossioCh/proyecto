@@ -7,10 +7,16 @@ get '/' do
   $torosVacas=TorosVacas.new
   $nroIntentos=10
   $listaIntentos=[]
+  $prueba=nil
   $intentosHechos=0
+  $nombreUsuario='Guest'
+  $esInvitado=true
   erb :showOptions
 end
 get '/ingresarCodigo' do
+  if((params[:numeroDeIntentos]).to_i !=0 )
+    $nroIntentos=(params[:numeroDeIntentos]).to_i
+  end
   erb :mainview
 end
 
@@ -18,7 +24,6 @@ get '/iniciar' do
 if($codigoSecretoOk==false)
   $codigoSecreto=params[:codigo]
 end
-
   erb :jugarview
 end
 
@@ -31,6 +36,9 @@ get '/resultadofinal' do
   erb :resultadofinal
 end
 get '/tipoDePartida' do
+  if($esInvitado==false)
+    $nombreUsuario=params[:username]
+  end
   erb :tipopartida
 end
 get '/username' do

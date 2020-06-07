@@ -21,14 +21,14 @@ get '/ingresarCodigo' do
 end
 
 get '/iniciar' do
-if($codigoSecreto==nil)
-  $codigoSecreto= (rand(1000...10000)).to_s
-  $codigoSecretoOk=true
-end  
-if($codigoSecretoOk==false)
-  $codigoSecreto=params[:codigo]
-end
-  erb :jugarview
+  if($codigoSecreto==nil)
+    $codigoSecreto= (rand(1000...10000)).to_s
+    $codigoSecretoOk=true
+  end  
+  if($codigoSecretoOk==false)
+   $codigoSecreto=params[:codigo]
+  end
+    erb :jugarview
 end
 
 post '/verificar' do
@@ -37,6 +37,7 @@ post '/verificar' do
 end
 
 get '/resultadofinal' do
+  File.write("ranking.txt", "data...")
   erb :resultadofinal
 end
 
@@ -48,6 +49,9 @@ get '/tipoDePartida' do
 end
 
 get '/elegirOponente' do
+  if((params[:numeroDeIntentos]).to_i !=0 )
+    $nroIntentos=(params[:numeroDeIntentos]).to_i
+  end
   erb:elegirOponente
 end
 

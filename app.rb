@@ -10,7 +10,6 @@ get '/' do
   $intentosHechos=0
   erb :showOptions
 end
-
 get '/ingresarCodigo' do
   erb :mainview
 end
@@ -30,4 +29,7 @@ end
 
 get '/resultadofinal' do
   erb :resultadofinal
+end
+get '/tipoDePartida' do
+  erb :tipopartida
 end

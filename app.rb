@@ -21,6 +21,10 @@ get '/ingresarCodigo' do
 end
 
 get '/iniciar' do
+if($codigoSecreto==nil)
+  $codigoSecreto= (rand(1000...10000)).to_s
+  $codigoSecretoOk=true
+end  
 if($codigoSecretoOk==false)
   $codigoSecreto=params[:codigo]
 end
@@ -35,13 +39,20 @@ end
 get '/resultadofinal' do
   erb :resultadofinal
 end
+
 get '/tipoDePartida' do
   if($esInvitado==false)
     $nombreUsuario=params[:username]
   end
   erb :tipopartida
 end
+
+get '/elegirOponente' do
+  erb:elegirOponente
+end
+
 get '/username' do
   erb :username
 end
+
 

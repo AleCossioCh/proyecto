@@ -37,10 +37,12 @@ post '/verificar' do
 end
 
 get '/resultadofinal' do
-  content = ("#{$nombreUsuario}\t#{$intentosHechos}\n")
-  f = File.open('ranking.txt', 'a')
-  f.write(content)
-  f.close
+  if($respuesta[0]==4 && $nombreUsuario!='Guest')
+    content = ("#{$nombreUsuario}\t#{$intentosHechos}\n")
+    f = File.open('ranking.txt', 'a')
+    f.write(content)
+    f.close
+  end
   erb :resultadofinal
 end
 
@@ -52,7 +54,7 @@ get '/tipoDePartida' do
 end
 
 get '/elegirOponente' do
-  if((params[:numeroDeIntentos]).to_i !=0 )
+  if((params[:numeroDeIntentos]).to_i !=0)
     $nroIntentos=(params[:numeroDeIntentos]).to_i
   end
   erb:elegirOponente

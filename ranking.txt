@@ -1,3 +1,5 @@
 moderador1	3
 jovensuelo1	2
 maria	1
+vania	1
+luluGana	1

@@ -4,7 +4,7 @@
 <%if $torosVacas.formatoCorrecto($codigoSecreto)%>
     <% $codigoSecretoOk = true %>
 <% end %>
-
+el codigo secreto es: <%=$codigoSecreto%> 
 Ingrese su intento
 <form method="post" action="/verificar ">
   <input type="string"  name="intento">

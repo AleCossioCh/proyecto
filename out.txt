@@ -1,7 +1,0 @@
-1	juana	
-1	mauri
-1	susy
-2	mario
-4	lili
-5	paty
-9	juan

@@ -22,7 +22,7 @@ end
 
 get '/iniciar' do
   if($codigoSecreto==nil)
-    $codigoSecreto= (rand(1110...10000)).to_s
+    $codigoSecreto= (rand(1000...10000)).to_s
     $codigoSecretoOk=true
   end  
   if($codigoSecretoOk==false)
@@ -42,11 +42,6 @@ get '/resultadofinal' do
     f = File.open('ranking.txt', 'a')
     f.write(content)
     f.close
-    File.open("out.txt", "w") do |file|
-      File.readlines("ranking.txt").sort.each do |line|
-        file.write(line.chomp<<"\n")
-      end
-    end
   end
   erb :resultadofinal
 end

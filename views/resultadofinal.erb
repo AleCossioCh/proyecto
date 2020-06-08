@@ -10,7 +10,7 @@
   <input type="submit" value="volver al inicio">
 
 <h2>Ranking: </h2>
-<% lines = File.readlines("out.txt")%>
+<% lines = File.readlines("ranking.txt").sort.first(10)%>
 <% lines.each do |line|%>
 <p><%=line%></<p>
 <% end %>

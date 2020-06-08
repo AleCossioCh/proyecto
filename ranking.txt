@@ -1,7 +1,7 @@
-moderador1	3
-jovensuelo1	2
-maria	1
-vania	1
-luluGana	1
-lulita	1
-AlejandraCossio	1
+5	paty
+2	mario
+9	juan
+4	lili
+1	juana	
+1	susy
+1	mauri

@@ -38,10 +38,15 @@ end
 
 get '/resultadofinal' do
   if($respuesta[0]==4 && $nombreUsuario!='Guest')
-    content = ("#{$nombreUsuario}\t#{$intentosHechos}\n")
+    content = ("#{$intentosHechos}\t#{$nombreUsuario}\n")
     f = File.open('ranking.txt', 'a')
     f.write(content)
     f.close
+    File.open("out.txt", "w") do |file|
+      File.readlines("ranking.txt").sort.each do |line|
+        file.write(line.chomp<<"\n")
+      end
+    end
   end
   erb :resultadofinal
 end

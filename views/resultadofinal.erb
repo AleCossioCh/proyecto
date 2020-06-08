@@ -8,3 +8,9 @@
 <br>intentos hechos: <%=$intentosHechos%>
 <form method="get" action="/ ">
   <input type="submit" value="volver al inicio">
+
+<h2>Ranking: </h2>
+<% lines = File.readlines("ranking.txt")%>
+<% lines.each do |line|%>
+<p><%=line%></<p>
+<% end %>

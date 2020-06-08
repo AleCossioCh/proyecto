@@ -22,11 +22,11 @@ end
 
 get '/iniciar' do
   if($codigoSecreto==nil)
-    $codigoSecreto= (rand(1000...10000)).to_s
+    $codigoSecreto= (rand(1110...10000)).to_s
     $codigoSecretoOk=true
   end  
   if($codigoSecretoOk==false)
-   $codigoSecreto=params[:codigo]
+    $codigoSecreto=params[:codigo]
   end
     erb :jugarview
 end

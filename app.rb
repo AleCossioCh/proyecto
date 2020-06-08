@@ -37,7 +37,10 @@ post '/verificar' do
 end
 
 get '/resultadofinal' do
-  File.write("ranking.txt", "data...")
+  content = ("#{$nombreUsuario}\t#{$intentosHechos}\n")
+  f = File.open('ranking.txt', 'a')
+  f.write(content)
+  f.close
   erb :resultadofinal
 end
 

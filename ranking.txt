@@ -1,1 +1,3 @@
-data...
+moderador1	3
+jovensuelo1	2
+maria	1

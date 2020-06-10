@@ -7,7 +7,6 @@ get '/' do
   $torosVacas=TorosVacas.new
   $nroIntentos=10
   $listaIntentos=[]
-  $dificultad=8
   $prueba=nil
   $intentosHechos=0
   $nombreUsuario='Guest'
@@ -15,9 +14,10 @@ get '/' do
   erb :showOptions
 end
 get '/ingresarCodigo' do
-  if((params[:numeroDeIntentos]).to_i !=0 )
-    $nroIntentos=(params[:numeroDeIntentos]).to_i
+  if((params[:dificultad]).to_i !=0)
+    $dificultad=(params[:dificultad]).to_i
   end
+  
   erb :mainview
 end
 
@@ -31,6 +31,12 @@ end
 post '/verificar' do
   $intento=params[:intento]
   erb :verificarcodigo
+end
+get '/escogerDificultad' do
+  if((params[:numeroDeIntentos]).to_i !=0 )
+    $nroIntentos=(params[:numeroDeIntentos]).to_i
+  end
+  erb :dificultadJuego
 end
 
 get '/resultadofinal' do

@@ -3,3 +3,5 @@
 9	juan
 4	lili
 1	carmen
+1	bernardo
+2	bernardo

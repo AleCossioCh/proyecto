@@ -7,6 +7,7 @@ get '/' do
   $torosVacas=TorosVacas.new
   $nroIntentos=10
   $listaIntentos=[]
+  $dificultad=8
   $prueba=nil
   $intentosHechos=0
   $nombreUsuario='Guest'
@@ -21,14 +22,10 @@ get '/ingresarCodigo' do
 end
 
 get '/iniciar' do
-  if($codigoSecreto==nil)
-    $codigoSecreto= (rand(1000...10000)).to_s
-    $codigoSecretoOk=true
-  end  
-  if($codigoSecretoOk==false)
-    $codigoSecreto=params[:codigo]
-  end
-    erb :jugarview
+if($codigoSecretoOk==false)
+  $codigoSecreto=params[:codigo]
+end
+  erb :jugarview
 end
 
 post '/verificar' do
@@ -37,31 +34,15 @@ post '/verificar' do
 end
 
 get '/resultadofinal' do
-  if($respuesta[0]==4 && $nombreUsuario!='Guest')
-    content = ("#{$intentosHechos}\t#{$nombreUsuario}\n")
-    f = File.open('ranking.txt', 'a')
-    f.write(content)
-    f.close
-  end
   erb :resultadofinal
 end
-
 get '/tipoDePartida' do
   if($esInvitado==false)
     $nombreUsuario=params[:username]
   end
   erb :tipopartida
 end
-
-get '/elegirOponente' do
-  if((params[:numeroDeIntentos]).to_i !=0)
-    $nroIntentos=(params[:numeroDeIntentos]).to_i
-  end
-  erb:elegirOponente
-end
-
 get '/username' do
   erb :username
 end
-
 

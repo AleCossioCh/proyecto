@@ -1,16 +1,10 @@
-<% if$respuesta[0]==4%>
+<% if$respuesta[0]==$dificultad%>
 <h1> GANASTE FELICIDADES</h1>
 <% end %>
-<% if $intentosHechos==$nroIntentos and $respuesta[0]!=4%>
+<% if $intentosHechos==$nroIntentos and $respuesta[0]!=$dificultad%>
   <h1> PERDISTE</h1>
   el codigo era <%=$codigoSecreto%>
 <% end %>
 <br>intentos hechos: <%=$intentosHechos%>
 <form method="get" action="/ ">
   <input type="submit" value="volver al inicio">
-
-<h2>Ranking: </h2>
-<% lines = File.readlines("ranking.txt").sort.first(10)%>
-<% lines.each do |line|%>
-<p><%=line%></<p>
-<% end %>

@@ -1,6 +1,6 @@
 class TorosVacas
     def tamanoCorrecto(cadena)
-        return 4==cadena.length()
+        return $dificultad==cadena.length()
      end
     def formatoCorrecto(cadena)
       return (tamanoCorrecto(cadena)==true and es_numero(cadena)==true)

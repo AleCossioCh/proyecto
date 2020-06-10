@@ -4,7 +4,7 @@
 <%if $torosVacas.formatoCorrecto($codigoSecreto)%>
     <% $codigoSecretoOk = true %>
 <% end %>
-el codigo secreto es: <%=$codigoSecreto%> 
+
 Ingrese su intento
 <form method="post" action="/verificar ">
   <input type="string"  name="intento">
@@ -22,7 +22,7 @@ Ingrese su intento
   toros: <%=$respuesta[0]%><br>
 <%end%>
 <% if $intento!=nil%>
-  <% if$respuesta[0]==4 or $intentosHechos==$nroIntentos%>
+  <% if$respuesta[0]==$dificultad or $intentosHechos==$nroIntentos%>
     <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=http://localhost:4567/resultadofinal">  
   <% end %>
 <% end %>

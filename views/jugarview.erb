@@ -6,8 +6,8 @@
 <% end %>
 
 Ingrese su intento
-<form method="post" action="/verificar ">
-  <input type="string"  name="intento">
+<form method="post" action="/verificar">
+  <input type="text"  name="intento">
   <input type="submit" value="Verificar">
 <% if $intento!=nil and $torosVacas.formatoCorrecto($intento)!=true %>
   <h4>Su respuesta no tiene el formato</h4>

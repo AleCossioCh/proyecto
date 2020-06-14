@@ -17,7 +17,6 @@ get '/ingresarCodigo' do
   if((params[:dificultad]).to_i !=0)
     $dificultad=(params[:dificultad]).to_i
   end
-  
   erb :mainview
 end
 
@@ -33,9 +32,7 @@ post '/verificar' do
   erb :verificarcodigo
 end
 get '/escogerDificultad' do
-  if((params[:numeroDeIntentos]).to_i !=0 )
-    $nroIntentos=(params[:numeroDeIntentos]).to_i
-  end
+  $tipoDeDato=params[:tipo]
   erb :dificultadJuego
 end
 
@@ -51,4 +48,12 @@ end
 get '/username' do
   erb :username
 end
+get '/tipoDeDato' do
+  if((params[:numeroDeIntentos]).to_i !=0 )
+    $nroIntentos=(params[:numeroDeIntentos]).to_i
+  end
+  erb :tipoDeDato
+end
+  
+
 

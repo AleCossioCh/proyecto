@@ -11,4 +11,6 @@ Scenario:
     And presionar el boton "Iniciar el juego"
     When ingresamos en el field "intento" el valor "1235"
     And pulsamos el boton "Verificar"
-    Then mostrar ver el mensaje "toros: 3"
+    Then recargo la pagina iniciar
+    And mostrar ver el mensaje "toros: 3"
+    And mostrar el texto "vacas: 0"

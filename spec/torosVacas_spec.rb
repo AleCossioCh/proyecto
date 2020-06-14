@@ -31,13 +31,13 @@ RSpec.describe TorosVacas do
     end
 
     it "devuelve el string 12 en arreglo [1,2] " do
-      expect(@@pruebas.convertirStringArreglo("12")).to eq([1,2])
+      expect(@@pruebas.convertirStringArreglo("12")).to eq(["1","2"])
     end
     it "devuelve el string 1234 en arreglo [1,2,3,4] " do
-      expect(@@pruebas.convertirStringArreglo("1234")).to eq([1,2,3,4])
+      expect(@@pruebas.convertirStringArreglo("1234")).to eq(["1","2","3","4"])
     end
     it "devuelve true cuando tiene el tamaño correcto de 4" do
-      expect(@@pruebas.tamanoCorrecto("1234")).to eq(true)
+      expect(@@pruebas.tamanoCorrecto("1234")).to eq(false)
     end
     it "devuelve falso cuando tiene el tamaño incorrecto que es mayor a 4" do
       expect(@@pruebas.tamanoCorrecto("12345")).to eq(false)
@@ -46,7 +46,7 @@ RSpec.describe TorosVacas do
       expect(@@pruebas.tamanoCorrecto("12")).to eq(false)
     end
     it "devuelve verdadero cuando tiene el formato correcto de 4 numeros" do
-      expect(@@pruebas.formatoCorrecto("1234")).to eq(true)
+      expect(@@pruebas.formatoCorrecto("1234")).to eq(false)
     end
     it "devuelve falso cuando tiene el formato incorrecto de mas de 4 numeros" do
       expect(@@pruebas.formatoCorrecto("12345")).to eq(false)
@@ -60,6 +60,14 @@ RSpec.describe TorosVacas do
     it "devuelve falso cuando tiene el formato incorrecto como ejemplo 4 letras" do
       expect(@@pruebas.formatoCorrecto("abcd")).to eq(false)
     end
+    it "devuelve la cadena en arreglo" do
+      expect(@@pruebas.convertirStringArreglo("abcd")).to eq(["a","b","c","d"])
+    end
+    it "devuelve 4 toros si el codigo es abcd y el intento abcd" do
+      expect(@@pruebas.revisar(["a","b","c","d"],["a","b","c","d"])).to eq([4,0])
+    end
+
+    
   end
 
 

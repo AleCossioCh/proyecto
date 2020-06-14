@@ -3,7 +3,7 @@ class TorosVacas
         return $dificultad==cadena.length()
      end
     def formatoCorrecto(cadena)
-      return (tamanoCorrecto(cadena)==true and es_numero(cadena)==true)
+      return tamanoCorrecto(cadena)
     end
     def es_numero(num)
         return num.to_s == num.to_i.to_s
@@ -31,7 +31,7 @@ class TorosVacas
       def convertirStringArreglo(cadenaString)
         resp=[]
         for i in 0..cadenaString.length-1
-          resp.append(cadenaString[i].to_i)
+          resp.append(cadenaString[i])
         end
         return resp
       end

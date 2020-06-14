@@ -1,9 +1,7 @@
-
-<form action="/escogerDificultad">
-  <p>Seleccione el tipo de dato para jugar:</p>
-  <input type="radio" id="numeros" name="tipo" value="numero">
-  <label for="numeros">Numeros</label><br>
-  <input type="radio" id="colores" name="tipo" value="color">
-  <label for="colores">Colores</label><br>
-  <input type="submit" value="Submit">
+<h1> Elegir el tipo de dato con el que quiere jugar  </h1> <br>
+<form method="get" action="/escogerDificultad">
+    <input type="submit" name="tipo" value="numeros">
+</form>
+ <form method="get" action="/escogerDificultad">
+    <input type="submit" name="tipo" value="colores">
 </form>

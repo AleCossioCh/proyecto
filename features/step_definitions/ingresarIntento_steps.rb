@@ -1,3 +1,6 @@
+Given('clickeamos {string}') do |boton_dato|
+  click_button(boton_dato)
+end
 When('ingresamos en el field {string} el valor {string}') do |campo,valor|
     fill_in(campo, :with => valor)
   end

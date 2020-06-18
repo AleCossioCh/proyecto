@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "C:/Users/BERNANRDO/Desktop/proyectofinal/app.rb": {
+      "/home/ale/Documentos/ProgramasRuby/proyecto-final/app.rb": {
         "lines": [
           1,
           1,
@@ -64,7 +64,7 @@
           null
         ]
       },
-      "C:/Users/BERNANRDO/Desktop/proyectofinal/lib/torosVacas.rb": {
+      "/home/ale/Documentos/ProgramasRuby/proyecto-final/lib/torosVacas.rb": {
         "lines": [
           1,
           1,
@@ -107,7 +107,7 @@
           null
         ]
       },
-      "C:/Users/BERNANRDO/Desktop/proyectofinal/features/step_definitions/elegirDificultad_steps.rb": {
+      "/home/ale/Documentos/ProgramasRuby/proyecto-final/features/step_definitions/elegirDificultad_steps.rb": {
         "lines": [
           1,
           9,
@@ -130,14 +130,14 @@
           null
         ]
       },
-      "C:/Users/BERNANRDO/Desktop/proyectofinal/features/step_definitions/ingresarCodigoColores_steps.rb": {
+      "/home/ale/Documentos/ProgramasRuby/proyecto-final/features/step_definitions/ingresarCodigoColores_steps.rb": {
         "lines": [
           1,
           2,
           null
         ]
       },
-      "C:/Users/BERNANRDO/Desktop/proyectofinal/features/step_definitions/ingresarCodigo_steps.rb": {
+      "/home/ale/Documentos/ProgramasRuby/proyecto-final/features/step_definitions/ingresarCodigo_steps.rb": {
         "lines": [
           1,
           6,
@@ -152,14 +152,14 @@
           null
         ]
       },
-      "C:/Users/BERNANRDO/Desktop/proyectofinal/features/step_definitions/ingresarIntentoColores.rb": {
+      "/home/ale/Documentos/ProgramasRuby/proyecto-final/features/step_definitions/ingresarIntentoColores.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "C:/Users/BERNANRDO/Desktop/proyectofinal/features/step_definitions/ingresarIntento_steps.rb": {
+      "/home/ale/Documentos/ProgramasRuby/proyecto-final/features/step_definitions/ingresarIntento_steps.rb": {
         "lines": [
           1,
           7,
@@ -180,7 +180,7 @@
           null
         ]
       },
-      "C:/Users/BERNANRDO/Desktop/proyectofinal/features/step_definitions/resultado_steps.rb": {
+      "/home/ale/Documentos/ProgramasRuby/proyecto-final/features/step_definitions/resultado_steps.rb": {
         "lines": [
           1,
           4,
@@ -204,17 +204,17 @@
           null
         ]
       },
-      "C:/Users/BERNANRDO/Desktop/proyectofinal/features/step_definitions/template_steps.rb": {
+      "/home/ale/Documentos/ProgramasRuby/proyecto-final/features/step_definitions/template_steps.rb": {
         "lines": [
 
         ]
       }
     },
-    "timestamp": 1592179205
+    "timestamp": 1592265928
   },
   "RSpec": {
     "coverage": {
-      "C:/Users/BERNANRDO/Desktop/proyectofinal/spec/torosVacas_spec.rb": {
+      "/home/ale/Documentos/ProgramasRuby/proyecto-final/spec/torosVacas_spec.rb": {
         "lines": [
           1,
           1,
@@ -291,7 +291,7 @@
           null
         ]
       },
-      "C:/Users/BERNANRDO/Desktop/proyectofinal/lib/torosVacas.rb": {
+      "/home/ale/Documentos/ProgramasRuby/proyecto-final/lib/torosVacas.rb": {
         "lines": [
           1,
           1,
@@ -335,6 +335,6 @@
         ]
       }
     },
-    "timestamp": 1592179191
+    "timestamp": 1592265916
   }
 }

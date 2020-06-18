@@ -7,12 +7,12 @@ get '/' do
   $torosVacas=TorosVacas.new
   $nroIntentos=10
   $listaIntentos=[]
-  $prueba=nil
   $intentosHechos=0
   $nombreUsuario='Guest'
   $esInvitado=true
   erb :showOptions
 end
+
 get '/ingresarCodigo' do
   if((params[:dificultad]).to_i !=0)
     $dificultad=(params[:dificultad]).to_i
